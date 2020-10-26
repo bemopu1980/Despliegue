@@ -13,7 +13,8 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "hashicorp/precise32"
-config.vm.hostname = "web-dev"
+  config.vm.hostname = "web-dev"
+  config.vm.provision "shell" , path: "provision.sh"
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
